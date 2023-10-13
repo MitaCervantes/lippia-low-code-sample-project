@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "budgetEstimate": {
+      "type": "object",
+      "properties": {
+        "active": {
+          "type": "boolean"
+        },
+        "estimate": {
+          "type": "number"
+        },
+        "includeExpenses": {
+          "type": "boolean"
+        },
+        "includesBillableExpenses": {
+          "type": "boolean"
+        },
+        "resetOption": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "active",
+        "estimate",
+        "includeExpenses",
+        "includesBillableExpenses",
+        "resetOption",
+        "type"
+      ]
+    },
+    "timeEstimate": {
+      "type": "object",
+      "properties": {
+        "active": {
+          "type": "boolean"
+        },
+        "estimate": {
+          "type": "string"
+        },
+        "includeNonBillable": {
+          "type": "boolean"
+        },
+        "resetOption": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "active",
+        "estimate",
+        "includeNonBillable",
+        "resetOption",
+        "type"
+      ]
+    }
+  },
+  "required": [
+    "budgetEstimate",
+    "timeEstimate"
+  ]
+}
