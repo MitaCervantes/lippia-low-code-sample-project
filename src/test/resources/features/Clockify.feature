@@ -27,7 +27,7 @@ Feature: Sample
 
 
   @ListarProyectos
-  Scenario: Crear proyecto en workspace
+  Scenario: Listar proyectos
     Given call Clockify.feature@ListarWorkSpace
     And base url env.base_url_clockify
     And endpoint /v1/workspaces/{{idworkspace}}/projects
@@ -37,7 +37,7 @@ Feature: Sample
 
 
   @ConsultarProyectoPorId
-  Scenario: Crear proyecto en workspace
+  Scenario: Consultar proyecto por ID
     Given call Clockify.feature@ListarProyectos
     And base url env.base_url_clockify
     And endpoint /v1/workspaces/{{idworkspace}}/projects/{{idproyecto}}
