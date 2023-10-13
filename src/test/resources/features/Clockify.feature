@@ -15,6 +15,24 @@ Feature: Sample
     Then the status code should be 200
     * define idworkspace = $.[0].id
 
+  @ListarProyectos
+  Scenario: Crear proyecto en workspace
+    Given call Clockify.feature@ListarWorkSpace
+    And base url env.base_url_clockify
+    And endpoint /v1/workspaces/{{idworkspace}}/projects
+    When execute method GET
+    Then the status code should be 200
+    * define idproyecto = $.[0].id
+
+  @FallaListarProyectos
+  Scenario: Crear proyecto en workspace
+    Given call Clockify.feature@ListarWorkSpace
+    And base url env.base_url_clockify
+    And endpoint /v1/workspaces/{{idworkspace}}/projects
+    When execute method GET
+    Then the status code should be 200
+    * define idproyecto = $.[0].id
+
 
   @CrearProyecto
   Scenario: Crear proyecto en workspace
@@ -24,16 +42,6 @@ Feature: Sample
     And set value "Project1" of key name in body addProject.json
     When execute method POST
     Then the status code should be 201
-
-
-  @ListarProyectos
-  Scenario: Crear proyecto en workspace
-    Given call Clockify.feature@ListarWorkSpace
-    And base url env.base_url_clockify
-    And endpoint /v1/workspaces/{{idworkspace}}/projects
-    When execute method GET
-    Then the status code should be 200
-    * define idproyecto = $.[0].id
 
 
   @ConsultarProyectoPorId
