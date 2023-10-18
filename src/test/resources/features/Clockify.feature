@@ -13,6 +13,7 @@ Feature: Sample
     And endpoint /v1/workspaces
     When execute method GET
     Then the status code should be 200
+    And validate schema workspaces.json
     * define idworkspace = $.[0].id
 
   @ListarProyectos

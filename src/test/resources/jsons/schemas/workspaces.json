@@ -1,0 +1,214 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "hourlyRate": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "amount",
+          "currency"
+        ]
+      },
+      "costRate": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "amount",
+          "currency"
+        ]
+      },
+      "memberships": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "userId": {
+              "type": "string"
+            },
+            "hourlyRate": {},
+            "costRate": {},
+            "targetId": {
+              "type": "string"
+            },
+            "membershipType": {
+              "type": "string"
+            },
+            "membershipStatus": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "userId",
+            "hourlyRate",
+            "costRate",
+            "targetId",
+            "membershipType",
+            "membershipStatus"
+          ]
+        }
+      },
+      "workspaceSettings": {
+        "type": "object",
+        "properties": {
+          "timeRoundingInReports": {
+            "type": "boolean"
+          },
+          "onlyAdminsSeeBillableRates": {
+            "type": "boolean"
+          },
+          "onlyAdminsCreateProject": {
+            "type": "boolean"
+          },
+          "onlyAdminsSeeDashboard": {
+            "type": "boolean"
+          },
+          "defaultBillableProjects": {
+            "type": "boolean"
+          },
+          "lockTimeEntries": {},
+          "lockTimeZone": {},
+          "round": {
+            "type": "object",
+            "properties": {
+              "round": {
+                "type": "string"
+              },
+              "minutes": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "round",
+              "minutes"
+            ]
+          },
+          "projectFavorites": {
+            "type": "boolean"
+          },
+          "canSeeTimeSheet": {
+            "type": "boolean"
+          },
+          "canSeeTracker": {
+            "type": "boolean"
+          },
+          "projectPickerSpecialFilter": {
+            "type": "boolean"
+          },
+          "forceProjects": {
+            "type": "boolean"
+          },
+          "forceTasks": {
+            "type": "boolean"
+          },
+          "forceTags": {
+            "type": "boolean"
+          },
+          "forceDescription": {
+            "type": "boolean"
+          },
+          "onlyAdminsSeeAllTimeEntries": {
+            "type": "boolean"
+          },
+          "onlyAdminsSeePublicProjectsEntries": {
+            "type": "boolean"
+          },
+          "trackTimeDownToSecond": {
+            "type": "boolean"
+          },
+          "projectGroupingLabel": {
+            "type": "string"
+          },
+          "adminOnlyPages": {
+            "type": "array",
+            "items": {}
+          },
+          "automaticLock": {},
+          "onlyAdminsCreateTag": {
+            "type": "boolean"
+          },
+          "onlyAdminsCreateTask": {
+            "type": "boolean"
+          },
+          "timeTrackingMode": {
+            "type": "string"
+          },
+          "multiFactorEnabled": {
+            "type": "boolean"
+          },
+          "isProjectPublicByDefault": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "timeRoundingInReports",
+          "onlyAdminsSeeBillableRates",
+          "onlyAdminsCreateProject",
+          "onlyAdminsSeeDashboard",
+          "defaultBillableProjects",
+          "lockTimeEntries",
+          "lockTimeZone",
+          "round",
+          "projectFavorites",
+          "canSeeTimeSheet",
+          "canSeeTracker",
+          "projectPickerSpecialFilter",
+          "forceProjects",
+          "forceTasks",
+          "forceTags",
+          "forceDescription",
+          "onlyAdminsSeeAllTimeEntries",
+          "onlyAdminsSeePublicProjectsEntries",
+          "trackTimeDownToSecond",
+          "projectGroupingLabel",
+          "adminOnlyPages",
+          "automaticLock",
+          "onlyAdminsCreateTag",
+          "onlyAdminsCreateTask",
+          "timeTrackingMode",
+          "multiFactorEnabled",
+          "isProjectPublicByDefault"
+        ]
+      },
+      "imageUrl": {
+        "type": "string"
+      },
+      "featureSubscriptionType": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "id",
+      "name",
+      "hourlyRate",
+      "costRate",
+      "memberships",
+      "workspaceSettings",
+      "imageUrl",
+      "featureSubscriptionType"
+    ]
+  }
+}
